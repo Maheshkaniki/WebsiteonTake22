@@ -1,0 +1,247 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo i {
+    margin-right: 10px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a i {
+    margin-right: 5px;
+}
+
+.header .nav a:hover {
+    text-decoration: underline;
+}
+
+.header .user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header .user-profile i {
+    margin-right: 5px;
+}
+
+aside {
+    background-color: #fff;
+    width: 200px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 20px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+aside ul li a i {
+    margin-right: 10px;
+}
+
+aside ul li a:hover {
+    color: #4a90e2;
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+main section {
+   Sure, let's continue enhancing the layout to ensure that all elements fit well within the dashboard and improve the overall visual appeal.
+
+### Updated CSS (Continued)
+
+```css
+main section {
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2, .card h3 {
+    margin-top: 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.card p {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #4a90e2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+form label {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form label:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    aside {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .performance-metrics,
+    .security-metrics,
+    .analytics-metrics,
+    .insights-metrics,
+    .settings-options {
+        flex-direction: column;
+    }
+
+    .performance-metrics > .card,
+    .security-metrics > .card,
+    .analytics-metrics > .card,
+    .insights-metrics > .card,
+    .settings-options > .card {
+        flex: 1 1 100%;
+    }
+}
